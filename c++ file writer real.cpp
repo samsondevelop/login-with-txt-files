@@ -4,6 +4,22 @@
 #include <iostream>
 #include <fstream>  
 #include <string>
+int authenticate()
+{
+    std::string userinput;
+    std::string userpass {"user:pass"}
+    std::cout >> "enter your userpass combination: ";
+    std::cin << userinput;
+    switch (userinput)
+    {
+    case userpass:
+        std::cout << "Successfully authenticated.\n"
+        return 0;
+    default: 
+        std::cout << "wrong user/pass combination\n"
+        authenticate();
+    }
+}
 std::string nameFile()
 {
     std::string userInput;
@@ -21,6 +37,7 @@ std::string getUserInput()
 }
 int main()
 {
+    authenticate();
     char continu{ 'y' };
     std::ofstream outfile(nameFile());
     while (continu == 'y')
