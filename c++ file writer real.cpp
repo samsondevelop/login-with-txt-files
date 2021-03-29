@@ -21,7 +21,6 @@ std::string getUserInput()
 }
 int main()
 {
-    //std::string fileName{ nameFile() };
     char continu{ 'y' };
     std::ofstream outfile(nameFile());
     while (continu == 'y')
